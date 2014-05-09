@@ -1,0 +1,173 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Documento base para escrita de monografias e relatórios do LabEPI.        %%
+%% Aluno: Nome do Aluno <aluno@email.com>                                    %%
+%% Orientador: Nome do Orientador <orientador@email.com>                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DECLARAÇÂO DAS OPÇÔES E DO TIPO DO DOCUMENTO                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definição dos possíveis tipos de documento
+\def\doctypem{m}
+\def\doctyper{r}
+
+% Escolha do tipo de documento
+%\def\doctype{m} % Para monografias
+\def\doctype{r} % Para relatórios técnicos
+
+\if\doctype\doctypem           % Se é do tipo monografia
+\documentclass[twoside,a4paper,11pt]{book}
+\fi
+\if\doctype\doctyper           % Se é do tipo relatório
+\documentclass[a4paper,11pt]{report}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PACOTES UTILIZADOS                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[usenames,dvips]{color}
+%\usepackage{ae}
+%\usepackage{afterpage}
+%\usepackage{appendix}
+%\usepackage{eukdate}
+%\usepackage{listings}
+%\usepackage{lscape}
+%\usepackage{multirow}
+%\usepackage{nomencl}
+%\usepackage{pslatex}
+%\usepackage{rotating}
+%\usepackage{setspace}
+%\usepackage{supertabular}
+%\usepackage{tabularx}
+%\usepackage{tikz}
+%\usepackage{url}
+%\usepackage{verbatim}
+%\usepackage{showframe}
+\usepackage[top=3.5cm,bottom=3.5cm,left=3cm,right=3cm]{geometry}
+\usepackage{natbib}
+\usepackage[labelfont=bf,font=small]{caption}
+\usepackage[plain,chapter]{algorithm}
+\usepackage[portuges,brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{lineno}
+\usepackage{longtable}
+\usepackage{paralist}
+\usepackage{thmtools}
+\usepackage{lastpage}
+\usepackage{imakeidx}
+\usepackage[pagebackref]{hyperref}
+\usepackage{titlesec}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PARÂMETROS                                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{content/commands}       % Comandos próprios
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INÍCIO DO DOCUMENTO                                                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definirtitulo{%
+Modelo de Referência no Desenvolvimento de Monografias e Relatórios do LabEPI}
+
+\definirtitulocurto{Modelo de Monografias e Relatórios do LabEPI}
+
+\begin{document}
+
+% Numeração de linhas para auxiliar nas correções (comentar na versão final)
+\linenumbers
+
+\pagestyle{empty}       % Páginas sem numeração e sem cabeçalhos
+
+\include{content/cover}        % Folha de rosto
+\include{content/record}       % Ficha catalográfica
+\if\doctype\doctypem           % Se é do tipo monografia
+  \include{content/signatures} % Folha de assinatura dos componentes da banca
+  \include{content/dedication} % Dedicatória
+  \include{content/thanks}     % Agradecimentos
+\fi
+\include{content/abstract}     % Resumo do trabalho em português e em inglês
+
+\if\doctype\doctypem           % Se é do tipo monografia
+\frontmatter
+\fi
+
+\pagestyle{labepi}
+
+\tableofcontents
+
+% Essas listas são opicionais nos relatórios, use-as quando a quantidade e a
+% conveniência forem o caso.
+\limparpagina
+\renewcommand{\listtheoremname}{Lista de Algoritmos}
+\listoftheorems[ignoreall,show={algoritmo}]
+\addcontentsline{toc}{chapter}{\listtheoremname}
+
+\limparpagina
+\renewcommand{\listtheoremname}{Lista de Definições}
+\listoftheorems[ignoreall,show={definicao,premissa}]
+\addcontentsline{toc}{chapter}{\listtheoremname}
+
+\limparpagina
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+
+\limparpagina
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tabelas}
+
+\limparpagina
+\renewcommand{\listtheoremname}{Lista de Teoremas}
+\listoftheorems[ignoreall,show={corolario,lema,teorema}]
+\addcontentsline{toc}{chapter}{\listtheoremname}
+\newpage
+
+\include{content/glossary}
+
+\if\doctype\doctypem           % Se é do tipo monografia
+\mainmatter
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CAPÍTULOS                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{content/chapter/1/text} % Introdução (apresentação do trabalho)
+\include{content/chapter/2/text} % Levantamento bibliográfico e metodologia
+\include{content/chapter/3/text} % Desenvolvimento e resultados do trabalho
+\include{content/chapter/4/text} % Conclusões e trabalhos futuros
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% APÊNDICE, BILIOGRAFIA E ÍNDICE REMISSIVO                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\include{content/appendix/1/text}
+
+\if\doctype\doctypem           % Se é do tipo monografia
+\backmatter
+\fi
+
+\limparpagina
+%\nocite{*}
+\bibliographystyle{labepi}
+\bibliography{content/bibliography}
+\addcontentsline{toc}{chapter}{\bibname}
+
+\limparpagina
+\markboth{Índice Remissivo}{Índice Remissivo}
+\printindex
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO DOCUMENTO                                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

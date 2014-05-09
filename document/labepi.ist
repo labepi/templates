@@ -1,0 +1,13 @@
+% MakeIndex style `labepi'
+% AUTHOR
+%   Joao Paulo de Souza Medeiros, DCEA-UFRN
+
+headings_flag 1
+heading_prefix "\\textbf\{"
+heading_suffix "}\\nopagebreak\n"
+
+symhead_positive "Símbolos"
+
+delim_0 " \\dotfill "
+delim_1 " \\dotfill "
+delim_2 " \\dotfill "

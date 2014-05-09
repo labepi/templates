@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INÍCIO DO ARQUIVO DE COMANDOS                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Muda o estilo do cabeçalho dos capítulos so for um relatório
+\if\doctype\doctyper           % Se é do tipo relatório
+\titleformat{\chapter}{\normalfont\huge\bf}{\thechapter.}{20pt}{\huge\bf}
+\fi
+
+\newcommand{\limparpagina}{%
+\if\doctype\doctypem           % Se é do tipo monografia
+  \cleardoublepage
+\fi
+\if\doctype\doctyper           % Se é do tipo relatório
+  \clearpage
+\fi}
+
+% Infenização
+\hyphenation{net-works lay-out}
+
+% Comandos próprios
+\newcommand{\citacao}[2]{%
+\begin{flushright}
+\footnotesize
+\parbox{0.95\textwidth}{\flushright{\it``#1''\\ \scriptsize #2}}
+\end{flushright}}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand{\definirtitulo}[1]{\newcommand{\titulo}{#1}}
+\newcommand{\definirtitulocurto}[1]{\newcommand{\titulocurto}{#1}}
+
+% Algoritmos
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\listalgorithmname}{Lista de Algoritmos}
+
+\renewcommand{\algorithmicindent}{2.0em}
+\renewcommand{\algorithmicrequire}{\textbf{algoritmo}}
+\renewcommand{\algorithmicensure}{\textbf{fim algoritmo}}
+\renewcommand{\algorithmicreturn}{\textbf{retorne}}
+\renewcommand{\algorithmicor}{\textbf{ou}}
+\renewcommand{\algorithmicand}{\textbf{e}}
+\renewcommand{\algorithmicend}{\textbf{fim}}
+\renewcommand{\algorithmicif}{\textbf{se}}
+\renewcommand{\algorithmicthen}{\textbf{ent\~ao}}
+\renewcommand{\algorithmicfor}{\textbf{para}}
+\renewcommand{\algorithmicforall}{\textbf{para cada}}
+\renewcommand{\algorithmicrepeat}{\textbf{repita}}
+\renewcommand{\algorithmicuntil}{\textbf{enquanto}}
+\renewcommand{\algorithmicwhile}{\textbf{enquanto}}
+\renewcommand{\algorithmicdo}{\textbf{fa\c{c}a}}
+
+% Cabeçalho e rodapé
+\renewcommand{\thefootnote}{[\roman{footnote}]}
+\setlength{\headheight}{14.5pt}
+
+\fancypagestyle{labepi}{%
+\fancyhead{}
+\fancyfoot{}
+\if\doctype\doctypem           % Se é do tipo monografia
+  \fancyhead[LO]{\bf\nouppercase \rightmark}
+  \fancyhead[RO]{\bf\thepage}
+  \fancyhead[LE]{\bf\thepage}
+  \fancyhead[RE]{\bf\nouppercase \leftmark}
+\fi
+\if\doctype\doctyper           % Se é do tipo relatório
+  \fancyhead[R]{\bf\thepage}
+  \fancyhead[L]{\bf\titulocurto}
+\fi
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\fancypagestyle{plain}{%
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[R]{\bf\thepage}
+\fancyhead[L]{\bf\titulocurto}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+% Teoremas
+\declaretheoremstyle[
+  spaceabove=6pt,
+  spacebelow=6pt,
+  headfont=\normalfont\bfseries,
+  notefont=\mdseries,
+  notebraces={(}{)},
+  bodyfont=\normalfont,
+  postheadspace=1em,
+  qed=$\square$
+]{thmsty}
+
+\declaretheorem[style=thmsty,numberwithin=chapter,name=Algoritmo]{algoritmo}
+
+\declaretheorem[style=thmsty,numberwithin=chapter,name=Definição]{definicao}
+\declaretheorem[style=thmsty,numberwithin=chapter,name=Premissa]{premissa}
+
+\declaretheorem[style=thmsty,numberwithin=chapter,name=Afirmação]{afirmacao}
+\declaretheorem[style=thmsty,numberwithin=chapter,name=Observação]{observacao}
+\declaretheorem[style=thmsty,numberwithin=chapter,name=Corolário]{corolario}
+\declaretheorem[style=thmsty,numberwithin=chapter,name=Lema]{lema}
+\declaretheorem[style=thmsty,numberwithin=chapter,name=Teorema]{teorema}
+
+\declaretheorem[style=thmsty,name=Nota]{nota}
+
+\renewcommand{\qedsymbol}{{\bf C.Q.D.}}
+
+% Bibliografia
+\newcommand{\backrefnotcited}{\relax} %(Not cited.)
+\newcommand{\backrefcitedsingle}[1]{\\(Citado na página~#1)}
+\newcommand{\backrefcitedmultiple}[1]{\\(Citado nas páginas~#1)}
+\renewcommand{\backreftwosep}{ e~}
+\renewcommand{\backreflastsep}{, e~}
+\renewcommand*{\backref}[1]{}
+\renewcommand*{\backrefalt}[4]{%
+\ifcase #1
+  \backrefnotcited
+\or
+  \backrefcitedsingle{#2}
+\else
+  \backrefcitedmultiple{#2}
+\fi}
+
+% Índice
+\makeindex[intoc,options={-s labepi.ist}]
+
+\hypersetup{colorlinks,linkcolor=blue,citecolor=blue}
+
+\index{recorrencia@recorrência|see{recursividade}}
+\index{recursividade|see{recorrência}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO ARQUIVO DE COMANDOS                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,506 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INÍCIO DO GLOSSÁRIO                                                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Glossário}
+\addcontentsline{toc}{chapter}{Glossário}
+\markboth{Glossário}{Glossário}
+
+% =========================================================================== %
+\section*{Acrônimos}
+
+BFS    \dotfill {\it Breadth-First Search}
+
+BGP    \dotfill {\it Border Gateway Protocol}
+
+CAIDA  \dotfill {\it Cooperative Association for Internet Data Analysis}
+
+CDF    \dotfill {\it Cumulative Distribution Function}
+
+DDoS   \dotfill {\it Distributed Denial of Service}
+
+DoS    \dotfill {\it Denial of Service}
+
+FIFO   \dotfill {\it First-In First-Out}
+
+IDS    \dotfill {\it Intrusion Detection System}
+
+IoT    \dotfill {\it Internet of Things}
+
+IP     \dotfill {\it Internet Protocol}
+
+IPv4   \dotfill {\it Internet Protocol version 4}
+
+IPv6   \dotfill {\it Internet Protocol version 6}
+
+IPS    \dotfill {\it Intrusion Prevention System}
+
+ISN    \dotfill {\it Initial Sequence Number}
+
+NAPT   \dotfill {\it Network Address and Port Translation}
+
+NAT    \dotfill {\it Network Address Translation}
+
+NAT-PT \dotfill {\it Network Address Translation -- Protocol Translation}
+
+NP     \dotfill {\it Nondeterministic Polynomial Time}
+
+P2P    \dotfill {\it Peer to Peer}
+
+PDF    \dotfill {\it Probability Distribution Function}
+
+PRNG   \dotfill {\it Pseudo-Random Number Generator}
+
+SOM    \dotfill {\it Self-Organizing Map}
+
+TCP    \dotfill {\it Transmission Control Protocol}
+
+% =========================================================================== %
+%\section*{Grandezas}
+%
+%Definição de prefixos para múltiplos binários.
+%
+%\begin{center}
+%\begin{tabular}{lcccccccc}
+%{\bf Prefixo} & {\it kilo} & {\it mega} & {\it giga}  & {\it tera} &
+%                {\it peta} & {\it exa}  & {\it zetta} & {\it yotta}
+%                \tabularnewline
+%{\bf Valor}   & $2^{10}$   & $2^{20}$   & $2^{30}$    & $2^{40}$   &
+%                $2^{50}$   & $2^{60}$   & $2^{70}$    & $2^{80}$
+%\end{tabular}
+%\end{center}
+
+% =========================================================================== %
+\section*{Simbologia}
+
+\begin{longtable}{p{1in}p{4.5in}}
+
+% --------------------------------------------------------------------------- %
+%\multicolumn{2}{l}{\bf Delimitadores}
+%\tabularnewline
+%\tabularnewline
+
+\qedsymbol \dotfill &
+\index{\qedsymbol}%
+Demarcador contração de `como se queria demonstrar'.
+\tabularnewline
+\tabularnewline
+
+$\square$ \dotfill &
+\index{$\square$}%
+Demarca fim de Algoritmos, Definições, Teoremas, dentre outros.
+\tabularnewline
+\tabularnewline
+
+% --------------------------------------------------------------------------- %
+\multicolumn{2}{l}{\bf Representações}
+\tabularnewline
+\tabularnewline
+
+$\mathbf{x}$ \dotfill &
+\index{vetor}%
+Letras minúsculas em negrito indicam vetores coluna.
+É possível parametrizar o vetor, por exemplo,
+$\mathbf{x}(t)=\begin{bmatrix}x_1(t) & \dotsb & x_n(t)\end{bmatrix}^\intercal$
+indica que o vetor $\mathbf{x}$ é variante no tempo.
+\tabularnewline
+\tabularnewline
+
+$\mathbf{X}$ \dotfill &
+\index{matriz}%
+Letras maiúsculas em negrito indicam matrizes.
+Assim como é possível parametrizar vetores, o mesmo é possível com matrizes,
+por exemplo, uma matriz variante no tempo pode ser representa por
+$\mathbf{X}(t)$.
+\tabularnewline
+\tabularnewline
+
+$\mathcal{X}$ \dotfill &
+\index{variavel aleatoria@variável aleatória}%
+Letras maiúsculas caligráficas representam variáveis aleatórias.
+\tabularnewline
+\tabularnewline
+
+$\dot{x}(t)$ \dotfill &
+\index{derivada}%
+Indica a derivada da função $x(\cdot)$ em relação ao tempo $t$.
+Também se aplica a funcionais em vetores e matrizes.
+\tabularnewline
+\tabularnewline
+
+$n!$ \dotfill &
+\index{fatorial}%
+Operador fatorial, definido recursivamente como $n!=n(n-1)!$ e com caso base
+$0!=1$.
+De forma iterativa também pode ser descrito como
+\begin{equation*}
+n!=\prod_{i=0}^{n-2} (n-i)\text{,}
+\end{equation*}
+para $n\geq 2$.
+\tabularnewline
+\tabularnewline
+
+$\binom{n}{k}$ \dotfill &
+\index{coeficiente binomial}%
+Coeficiente binomial de $n$ dado $k$, onde $0 \leq k \leq n$, definido como
+\begin{equation*}
+\binom{n}{k} = \frac{n!}{k!(n-k)!}\text{,}
+\end{equation*}
+que pode ser computado de forma eficiente utilizando
+\begin{equation*}
+\binom{n}{k} = \prod_{i=1}^k \frac{n-(k-i)}{i}\text{,}
+\end{equation*}
+que possui complexidade $\Theta(k)$.
+\tabularnewline
+\tabularnewline
+
+$\delta(t),\delta_{ij}$ \dotfill &
+\index{delta de Kronecker}%
+\index{$\delta(t),\delta_{ij}$}%
+A função delta de Kronecker, definida como
+\begin{equation*}
+\delta_{ij} \triangleq
+\left\{
+\begin{array}{cl}
+    1         & \text{se } i = j \\
+    0         & \text{caso contrário}
+\end{array}
+\right.\text{,}
+\end{equation*}
+utilizada como contrapartida discreta da função delta de Dirac.
+\index{delta de Dirac}%
+Por conveniência, é possível usar a seguinte representação
+\begin{equation*}
+\delta(t) \triangleq
+\left\{
+\begin{array}{cl}
+    1         & \text{se } t = 0 \\
+    0         & \text{caso contrário}
+\end{array}
+\right.\text{.}
+\end{equation*}
+Dessa forma temos de forma equivalente que o valor $\delta(i - j)$ é $1$ se
+$i=j$ e $0$ caso contrário.
+\tabularnewline
+\tabularnewline
+
+$\operatorname{H}_n$ \dotfill &
+\index{serie harmonica@série harmônica}%
+\index{$\operatorname{H}_n$}%
+Indica a soma dos $n$ primeiros termos da série harmônica, representada por
+\begin{equation*}
+\operatorname{H}_n = \sum_{i=1}^n \frac{1}{i}\text{,}
+\end{equation*}
+que diverge no limite quando $n \rightarrow \infty$.
+Porém, possui a seguinte propriedade assintótica
+\begin{equation*}
+\lim_{n \rightarrow \infty}\operatorname{H}_n - \log(n) = \gamma\text{,}
+\end{equation*}
+onde $\gamma\approx 0.57721$ representa a constante de Euler-Mascheroni.
+\index{constante de Euler-Mascheroni}%
+Portanto, é possível usar a seguinte igualdade assintótica
+\begin{equation*}
+\operatorname{H}_n \simeq \log(n) + \gamma\text{,}
+\end{equation*}
+onde o logaritmo natural é o da base natural $e$.
+\tabularnewline
+\tabularnewline
+
+$\{x : p(x)\}$ \dotfill &
+Descrição do conjunto representado pelos elementos $x$ que têm a propriedade,
+ou predicado, $p(x)$.
+Adicionalmente, o predicado $p(x)$ pode ser descrito utilizando os operadores
+da lógica proposicional.
+\tabularnewline
+\tabularnewline
+
+$(\forall x)(p(x))$ \dotfill &
+\index{quantificador!universal}%
+Quantificação universal em relação aos elementos $x$ que têm a propriedade,
+ou predicado, $p(x)$.
+A pertinência dos elementos representados por $x$ também pode ser descrita de
+forma explicita, por exemplo, $(\forall x \in \mathbb{N})(p(x))$.
+Que expressa que todos os elementos do conjunto dos números naturais possuem o
+predicado $p$.
+Adicionalmente, o predicado $p(x)$ pode ser descrito utilizando os operadores
+da lógica proposicional.
+\tabularnewline
+\tabularnewline
+
+$(\exists x)(p(x))$ \dotfill &
+\index{quantificador!existencial}%
+Quantificação existencial em relação aos elementos $x$ que têm a propriedade,
+ou predicado, $p(x)$.
+A pertinência dos elementos representados por $x$ também pode ser descrita de
+forma explicita, por exemplo, $(\exists x \in \mathbb{N})(p(x))$.
+Que expressa que existe pelo menos um número natural que possui o predicado
+$p$.
+Adicionalmente, o predicado $p(x)$ pode ser descrito utilizando os operadores
+da lógica proposicional.
+\tabularnewline
+\tabularnewline
+
+% --------------------------------------------------------------------------- %
+\multicolumn{2}{l}{\bf Notação assintótica}
+\tabularnewline
+\tabularnewline
+
+$\operatorname{O}(\cdot)$ \dotfill &
+\index{$\operatorname{O}(\cdot)$}%
+Quando é expresso que $f(n) \in \operatorname{O}(g(n))$%
+\footnote{Utiliza-se o símbolo de pertinência $\in$ pois interpreta-se que o
+operador $\operatorname{O}(\cdot)$ representa o conjunto das funções que são
+limitadas superiormente pelo seu argumento, no caso a função $g(\cdot)$.
+O mesmo princípio pode ser aplicada aos outros operadores assintóticos
+apresentados em sequência.}%
+, dize-se que existe uma constante $k$, tal que a função $f(n)$, para todo
+valor de $n>n_0$, é sempre limitada superiormente por $kg(n)$.
+\tabularnewline
+\tabularnewline
+
+$\Omega(\cdot)$ \dotfill &
+\index{$\Omega(\cdot)$}%
+Quando é expresso que $f(n)\in\Omega(g(n))$, dize-se que existe uma constante
+$k$, tal que a função $f(n)$, para todo valor de $n>n_0$, é sempre limitada
+inferiormente por $kg(n)$.
+\tabularnewline
+\tabularnewline
+
+$\Theta(\cdot)$ \dotfill &
+\index{$\Theta(\cdot)$}%
+Quando é expresso que $f(n)\in\Theta(g(n))$, dize-se que existe uma constante
+$k_1$, tal que a função $f(n)$, para todo valor de $n>n_0$, é sempre limitada
+inferiormente por $k_1g(n)$, e também existe uma outra constante $k_2$, tal que
+a função $f(n)$, para todo valor de $n>n_0$, é sempre limitada superiormente
+por $k_2g(n)$.
+De forma equivalente, define-se que $f(n)\in\Theta(g(n))$ se e somente se
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{f(n)}{g(n)}=c\text{,}
+\end{equation*}
+para $g(n)$ diferente de zero ou, pelo menos, sempre maior de que zero a partir
+de algum ponto e para $0<c<\infty$.
+\tabularnewline
+\tabularnewline
+
+% --------------------------------------------------------------------------- %
+\multicolumn{2}{l}{\bf Igualdades matemáticas}
+\index{igualdades}
+\tabularnewline
+\tabularnewline
+
+$\approx$ \dotfill &
+\index{$\approx$}%
+Valor aproximado.
+\tabularnewline
+\tabularnewline
+
+$\simeq$ \dotfill &
+\index{$\simeq$}%
+Igualdade assintótica, isto é, se $f(n) \simeq g(n)$ então
+\begin{equation*}
+\lim_{n\rightarrow\infty}\frac{f(n)}{g(n)}=1\text{,}
+\end{equation*}
+para $g(\cdot)$ infinitamente diferente de zero.
+\tabularnewline
+\tabularnewline
+
+$\propto$ \dotfill &
+\index{$\propto$}%
+Proporcionalidade, isto é, se $f(n) \propto g(n)$, então existe uma constante
+$k$ tal que $f(n)=kg(n)$.
+De forma generalista, pode considerar também a igualdade assintótica.
+\tabularnewline
+\tabularnewline
+
+$\triangleq$ \dotfill &
+\index{$\triangleq$}%
+Igualdade por definição, por exemplo,
+\begin{equation*}
+\frac{d\mathbf{x}(t)}{dt}
+\triangleq
+\begin{bmatrix}
+\frac{dx_1(t)}{dt} & \dotsb & \frac{dx_n(t)}{dt}
+\end{bmatrix}^\intercal\text{,}
+\end{equation*}
+onde $\mathbf{x}(t)$ é um vetor coluna.
+\tabularnewline
+\tabularnewline
+
+$\equiv$ \dotfill &
+\index{$\equiv$}%
+Equivalência, por exemplo, $x \equiv y$ significa que $x$ é definido como sendo
+logicamente igual à $y$.
+\tabularnewline
+\tabularnewline
+
+% --------------------------------------------------------------------------- %
+\multicolumn{2}{l}{\bf Notação estatística}
+\tabularnewline
+\tabularnewline
+
+$\sim$ \dotfill &
+Indicador de distribuição de probabilidade, por exemplo $\mathcal{X} \sim
+N(\mu,\sigma)$ indica que a variável aleatória $\mathcal{X}$ segue uma
+distribuição de probabilidade normal com média $\mu$ e desvio padrão $\sigma$.
+\index{media@média}%
+\index{desvio padrao@desvio padrão}%
+\tabularnewline
+\tabularnewline
+
+$\mathcal{X}_\zeta$ \dotfill &
+\index{variavel aleatoria@variável aleatória!realizacao@realização}%
+Resultado ou realização $\zeta$ da variável aleatória $\mathcal{X}$.
+\tabularnewline
+\tabularnewline
+
+$\operatorname{P}(\mathcal{X}_\zeta)$ \dotfill &
+\index{probabilidade}%
+\index{$\operatorname{P}(\mathcal{X}_\zeta)$}%
+Probabilidade da variável aleatória $\mathcal{X}$ assumir a realização $\zeta$.
+\tabularnewline
+\tabularnewline
+
+$\operatorname{P}(\mathcal{X}_\zeta\mid p)$ \dotfill &
+\index{probabilidade!condicional}%
+\index{$\operatorname{P}(\mathcal{X}_\zeta\mid p)$}%
+Probabilidade da variável aleatória $\mathcal{X}$ assumir a realização $\zeta$
+dado que o predicado $p$ é verdadeiro.
+\tabularnewline
+\tabularnewline
+
+$\operatorname{E}\{\mathcal{X}\}$ \dotfill &
+\index{valor esperado}%
+\index{$\operatorname{E}\{\mathcal{X}\}$}%
+Valor esperado da variável aleatória $\mathcal{X}$.
+No caso discreto é definido como
+\begin{equation*}
+\operatorname{E}\{\mathcal{X}\}=
+    \sum_{\{\zeta \in \mho\}}
+        \mathcal{X}_\zeta \operatorname{P}(\mathcal{X}_\zeta)\text{,}
+\end{equation*}
+onde $\mho$ é o conjunto de possíveis realizações da variável aleatória.
+\tabularnewline
+\tabularnewline
+
+$\operatorname{E}\{\mathcal{X}\mid p\}$ \dotfill &
+Valor esperado da variável aleatória $\mathcal{X}$ dado que o predicado $p$
+é verdadeiro.
+No caso discreto é definido como
+\begin{equation*}
+\operatorname{E}\{\mathcal{X}\}=
+    \sum_{\{\zeta \in \mho\}}
+        \mathcal{X}_\zeta \operatorname{P}(\mathcal{X}_\zeta\mid p)\text{,}
+\end{equation*}
+onde $\mho$ é o conjunto de possíveis realizações da variável aleatória.
+\tabularnewline
+\tabularnewline
+
+% --------------------------------------------------------------------------- %
+\multicolumn{2}{l}{\bf Operadores matemáticos}
+\tabularnewline
+\tabularnewline
+
+$|\cdot|$ \dotfill &
+\index{valor absoluto}%
+\index{cardinalidade}%
+Se for aplicado a um escalar, indica o seu valor absoluto.
+Caso seja aplicado a um conjunto, indica sua cardinalidade.
+\tabularnewline
+\tabularnewline
+
+$\lfloor\cdot\rfloor$ \dotfill &
+O maior valor inteiro menor ou igual ao escalar.
+\tabularnewline
+\tabularnewline
+
+$\lceil\cdot\rceil$ \dotfill &
+O menor valor inteiro maior ou igual ao escalar.
+\tabularnewline
+\tabularnewline
+
+$\rho(\cdot)$ \dotfill &
+\index{$\rho(\cdot)$}%
+\index{posto}%
+\index{matriz!posto da}%
+Posto de uma matriz, por exemplo dada uma matriz identidade
+$\mathbf{I}_{n \times n}$, $\rho(\mathbf{I})=n$.
+\tabularnewline
+\tabularnewline
+
+$\mathbf{X}^\intercal$ \dotfill &
+\index{matriz!transposta}%
+Operação de transposição da matriz $\mathbf{X}$, isto é, troca dos elementos
+$x_{ij}$ pelos elementos $x_{ji}$.
+Também pode ser aplicada a vetores, no qual transforma vetores coluna em
+vetores linha, e vice-versa.
+\tabularnewline
+\tabularnewline
+
+$X - Y$ \dotfill &
+Subtração de elementos de conjuntos.
+Utilizando a notação de conjuntos pode ser definido por
+\begin{equation*}
+X - Y \triangleq
+    \{z : (z \in X) \wedge (z \notin Y)\}\text{,}
+\end{equation*}
+que representa o conjunto resultante da retirada dos elementos em $X$ que
+também estão em $Y$.
+\tabularnewline
+\tabularnewline
+
+$X \times Y$ \dotfill &
+\index{produto cartesiano}%
+Produto cartesiano entre dois conjuntos $X$ e $Y$.
+Utilizando a notação de conjuntos pode ser definido por
+\begin{equation*}
+X \times Y \triangleq
+    \{(x,y) : (x \in X) \wedge (y \in Y)\}\text{,}
+\end{equation*}
+que representa todas as possíveis combinações de pares ordenados entres os
+elementos de $X$ e de $Y$.
+\tabularnewline
+\tabularnewline
+
+% --------------------------------------------------------------------------- %
+\multicolumn{2}{l}{\bf Operadores lógicos}
+\tabularnewline
+\tabularnewline
+
+$\neg$ \dotfill &
+\index{negacao@negação}%
+Operador unário de negação.
+\tabularnewline
+\tabularnewline
+
+$\vee$ \dotfill &
+\index{disjuncao@disjunção}%
+Operador binário de disjunção, definido como `ou inclusivo'.
+\tabularnewline
+\tabularnewline
+
+$\wedge$ \dotfill &
+\index{conjuncao@conjunção}%
+Operador binário de conjunção, definido com valor lógico `e'.
+\tabularnewline
+\tabularnewline
+
+$\Rightarrow$ \dotfill &
+\index{implicacao@implicação}%
+Operador binário de implicação, por exemplo, $(a \Rightarrow b)$, onde $a$ é
+denominado antecedente e $b$ consequente.
+Único operador binário não comutativo.
+\tabularnewline
+\tabularnewline
+
+$\Leftrightarrow$ \dotfill &
+\index{bi-implicacao@bi-implicação}%
+Operador binário de bi-implicação.
+Onde $(a \Leftrightarrow b)$ é logicamente equivalente a representação
+$((a \Rightarrow b) \wedge (b \Rightarrow a))$.
+
+\end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO GLOSSÁRIO                                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

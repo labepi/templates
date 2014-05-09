@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INÍCIO CAPÍTULO                                                           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Desenvolvimento}
+\label{cap:3:desenvolvimento}
+
+\citacao{%
+Mathematical elegance is not a dispensable luxury\\
+but a factor that decides between success and failure.}
+{Edsger Wybe Dijkstra}
+
+O problema...
+
+Este Capítulo está organizado da seguinte forma...
+
+% =========================================================================== %
+\section{Introdução}
+\label{sec:3:introducao}
+
+% =========================================================================== %
+\section{Modelo proposto}
+\label{sec:3:modelo}
+
+A relação assintótica entre a razão de duas funções pode ser usada no estudo da
+ordem de crescimento delas.
+Para isso, utiliza-se a seguinte
+equação~\cite{brassard1996fundamentals,cormen2009algorithms}:
+\begin{linenomath}
+\begin{equation}\label{eq:asymtheorem}
+\lim_{n\rightarrow\infty}\frac{f(n)}{g(n)}=
+    \left\{
+    \begin{array}{cl}
+    0               & \implies f(n) \in O(g(n)) \\
+    0 < c < \infty  & \implies f(n) \in \Theta(g(n)) \\
+    \infty          & \implies f(n) \in \Omega(g(n)) 
+    \end{array}
+    \right.\text{,}
+\end{equation}
+\end{linenomath}
+onde $c$ representa uma constante qualquer que satisfaz a inequação
+$0<c<\infty$.
+
+\begin{lema}[Comportamento assintótico de $f(n,m)=(n^{m+1}-n)/(n-1)$]
+\label{lem:comptns}
+A função de duas variáveis $f(n,m)=(n^{m+1}-n)/(n-1)$ possui comportamento
+assintótico da ordem de $\Theta(n^m)$.
+\end{lema}
+
+\begin{proof}
+Para verificar se duas funções $f(n)$ e $g(n)$ possuem mesmo comportamento
+assintótico, isto é, $f(n) \in \Theta(g(n))$ e {\it vice-versa}, deve-se
+analisar se o limite da razão das duas, como definido pela
+Equação~\ref{eq:asymtheorem}, converge para uma constante.
+Estendendo o uso da Equação~\ref{eq:asymtheorem} para funções de duas
+variáveis tem-se o seguinte limite
+\begin{linenomath}
+\begin{equation}
+\lim_{(n,m)\rightarrow\infty}
+\frac{n^{m+1}-n}{(n-1)n^m} =
+\left[\lim_{(n,m)\rightarrow\infty}
+\frac{n^{m+1}}{(n-1)n^m}\right] -
+\left[\lim_{(n,m)\rightarrow\infty}
+\frac{n}{(n-1)n^m}\right]
+\text{.}
+\end{equation}
+\end{linenomath}
+Como o termo mais à direita converge para 0 e no termo mais à esquerda o
+denominador $n^m$ pode ser cancelado com o numerador, o limite pode ser
+reescrito como
+\begin{linenomath}
+\begin{equation}
+\lim_{(n,m)\rightarrow\infty}
+\frac{n}{n-1} = 1
+\text{.}
+\end{equation}
+\end{linenomath}
+Portanto, $f(n,m) \in \Theta(n^m)$.
+\end{proof}
+
+% =========================================================================== %
+\section{Experimentos}
+\label{sec:3:experimentos}
+
+
+% =========================================================================== %
+\section{Considerações}
+\label{sec:3:consideracoes}
+
+Os resultados apresentados neste Capítulo...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM CAPÍTULO                                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
