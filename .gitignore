@@ -8,6 +8,9 @@
 *.out
 *.toc
 
+# vim temporary files
+*.swp
+
 ## Intermediate documents:
 *.dvi
 # these rules might exclude image files for figures etc.

@@ -171,6 +171,31 @@ possibilidades de evolução de acordo com a ilustração apresentada.
     indiquem a validade da solução.
 \end{compactenum}
 
+
+% ========================================================================= %
+\section{Cronograma}
+\label{sec:2:cronograma}
+
+\begin{figure}[ht]
+\centering
+\begin{ganttchart}{12}
+\gantttitle{Título do diagrama}{12} \\
+\gantttitlelist{2009,...,2014}{2} \\
+\ganttgroup[progress=58.33]{Grupo 1}{1}{12} \\
+\ganttbar[progress=100]{Tarefa 1}{1}{2} \\
+\ganttbar[progress=100]{Tarefa 2}{3}{4} \\
+\ganttbar[progress=50]{Tarefa 3}{3}{12} \\
+\ganttbar[progress=0]{Tarefa 4}{10}{12} \\
+\ganttmilestone[inline]{Marco 1}{4}
+\ganttmilestone[inline]{Marco 2}{12}
+\ganttlink[link type=f-s]{elem1}{elem2}
+\ganttlink[link type=s-s]{elem2}{elem3}
+\ganttlink[link type=f-f]{elem3}{elem4}
+\end{ganttchart}
+\caption{Exemplo de diagrama Gantt.}
+\end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% FIM CAPÍTULO                                                            %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
