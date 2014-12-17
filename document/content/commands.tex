@@ -21,21 +21,22 @@
 % Comandos próprios
 \newcommand*\pct{\scalebox{.9}{\%}}
 
+% Configuração de diagramas de Gantt
 \ganttset{%
-    canvas/.append style={fill=none, dotted},
-    vgrid={draw={none}, dotted},
-    today=7,
-    today label=Prazo,
-    group height=.3,
-    group left shift=0,
-    group right shift=0,
-    group peaks={0}{}{},
-    group/.style={draw=black,fill=black},    
-    bar height=.3,
-    bar/.style={fill=black},
-    milestone inline label node/.append style={left=5mm},
-    progress label text={#1\pct},
-    title height=1}
+  canvas/.append style={fill=none, dotted},
+  %vgrid={draw={none}, dotted},
+  vgrid,
+  hgrid,
+  today label=Prazo,
+  group height=.3,
+  group left shift=0,
+  group right shift=0,
+  group peaks={0}{}{},
+  group/.style={draw=black,fill=black},    
+  bar height=.3,
+  bar/.style={fill=black},
+  progress label text={#1\pct},
+  title height=1}
 
 \newcommand{\citacao}[2]{%
 \begin{flushright}
