@@ -180,7 +180,7 @@ FUNCTION {format.rem.names}
 	    { ", " * t * }
 	    { t "others" =
 		{ " et~al." * }
-		{ " \harvardand\ " * t * }
+		{ " e " * t * }
 	      if$
 	    }
 	  if$
@@ -542,7 +542,7 @@ FUNCTION {format.lab.names.abbr}
 	{ s #1 "{vv~}{ll}" format.name$ " et~al." * }
 	{ s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
             { s #1 "{vv~}{ll}" format.name$ " et~al." * }
-	    { s #1 "{vv~}{ll}" format.name$ " \harvardand\ " *
+	    { s #1 "{vv~}{ll}" format.name$ " e " *
               s #2 "{vv~}{ll}" format.name$ * 
             }
           if$
@@ -565,7 +565,7 @@ FUNCTION {format.lab.names.full}
 	    { ", " * t * }
 	    { t "outros" =
 		{ " et~al." * }
-		{ " \harvardand\ " * t * }
+		{ " e " * t * }
 	      if$
 	    }
 	  if$
@@ -1037,7 +1037,7 @@ FUNCTION {sortify}
 }
 
 FUNCTION {sortify.names}
-{ " \harvardand\ " " " replace.substring
+{ " e " " " replace.substring
   " et~al." " zzz" replace.substring
   sortify
 }
