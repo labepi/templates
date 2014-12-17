@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% INÍCIO DO ARQUIVO DE COMANDOS                                             %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INÍCIO DO ARQUIVO DE COMANDOS                                           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Muda o estilo do cabeçalho dos capítulos so for um relatório
 \if\doctype\doctyper           % Se é do tipo relatório
@@ -88,19 +88,20 @@
   notebraces={(}{)},
   bodyfont=\normalfont,
   postheadspace=1em,
-  qed=$\square$
+  qed=$\square$,
+  numberwithin=chapter
 ]{thmsty}
 
-\declaretheorem[style=thmsty,numberwithin=chapter,name=Algoritmo]{algoritmo}
+\declaretheorem[style=thmsty,name=Algoritmo]{algoritmo}
 
-\declaretheorem[style=thmsty,numberwithin=chapter,name=Definição]{definicao}
-\declaretheorem[style=thmsty,numberwithin=chapter,name=Premissa]{premissa}
+\declaretheorem[style=thmsty,name=Definição]{definicao}
+\declaretheorem[style=thmsty,name=Premissa]{premissa}
 
-\declaretheorem[style=thmsty,numberwithin=chapter,name=Afirmação]{afirmacao}
-\declaretheorem[style=thmsty,numberwithin=chapter,name=Observação]{observacao}
-\declaretheorem[style=thmsty,numberwithin=chapter,name=Corolário]{corolario}
-\declaretheorem[style=thmsty,numberwithin=chapter,name=Lema]{lema}
-\declaretheorem[style=thmsty,numberwithin=chapter,name=Teorema]{teorema}
+\declaretheorem[style=thmsty,name=Afirmação]{afirmacao}
+\declaretheorem[style=thmsty,name=Observação]{observacao}
+\declaretheorem[style=thmsty,name=Corolário]{corolario}
+\declaretheorem[style=thmsty,name=Lema]{lema}
+\declaretheorem[style=thmsty,name=Teorema]{teorema}
 
 \declaretheorem[style=thmsty,name=Nota]{nota}
 
@@ -130,6 +131,6 @@
 \index{recorrencia@recorrência|see{recursividade}}
 \index{recursividade|see{recorrência}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% FIM DO ARQUIVO DE COMANDOS                                                %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO ARQUIVO DE COMANDOS                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

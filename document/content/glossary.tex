@@ -1,12 +1,12 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% INÍCIO DO GLOSSÁRIO                                                       %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INÍCIO DO GLOSSÁRIO                                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter*{Glossário}
 \addcontentsline{toc}{chapter}{Glossário}
 \markboth{Glossário}{Glossário}
 
-% =========================================================================== %
+% ========================================================================= %
 \section*{Acrônimos}
 
 BFS    \dotfill {\it Breadth-First Search}
@@ -55,7 +55,7 @@ SOM    \dotfill {\it Self-Organizing Map}
 
 TCP    \dotfill {\it Transmission Control Protocol}
 
-% =========================================================================== %
+% ========================================================================= %
 %\section*{Grandezas}
 %
 %Definição de prefixos para múltiplos binários.
@@ -70,12 +70,12 @@ TCP    \dotfill {\it Transmission Control Protocol}
 %\end{tabular}
 %\end{center}
 
-% =========================================================================== %
+% ========================================================================= %
 \section*{Simbologia}
 
 \begin{longtable}{p{1in}p{4.5in}}
 
-% --------------------------------------------------------------------------- %
+% ------------------------------------------------------------------------- %
 %\multicolumn{2}{l}{\bf Delimitadores}
 %\tabularnewline
 %\tabularnewline
@@ -92,7 +92,7 @@ Demarca fim de Algoritmos, Definições, Teoremas, dentre outros.
 \tabularnewline
 \tabularnewline
 
-% --------------------------------------------------------------------------- %
+% ------------------------------------------------------------------------- %
 \multicolumn{2}{l}{\bf Representações}
 \tabularnewline
 \tabularnewline
@@ -101,7 +101,8 @@ $\mathbf{x}$ \dotfill &
 \index{vetor}%
 Letras minúsculas em negrito indicam vetores coluna.
 É possível parametrizar o vetor, por exemplo,
-$\mathbf{x}(t)=\begin{bmatrix}x_1(t) & \dotsb & x_n(t)\end{bmatrix}^\intercal$
+$\mathbf{x}(t)=
+    \begin{bmatrix}x_1(t) & \dotsb & x_n(t)\end{bmatrix}^\intercal$
 indica que o vetor $\mathbf{x}$ é variante no tempo.
 \tabularnewline
 \tabularnewline
@@ -220,8 +221,8 @@ Quantificação universal em relação aos elementos $x$ que têm a propriedade,
 ou predicado, $p(x)$.
 A pertinência dos elementos representados por $x$ também pode ser descrita de
 forma explicita, por exemplo, $(\forall x \in \mathbb{N})(p(x))$.
-Que expressa que todos os elementos do conjunto dos números naturais possuem o
-predicado $p$.
+Que expressa que todos os elementos do conjunto dos números naturais possuem
+o predicado $p$.
 Adicionalmente, o predicado $p(x)$ pode ser descrito utilizando os operadores
 da lógica proposicional.
 \tabularnewline
@@ -240,7 +241,7 @@ da lógica proposicional.
 \tabularnewline
 \tabularnewline
 
-% --------------------------------------------------------------------------- %
+% ------------------------------------------------------------------------- %
 \multicolumn{2}{l}{\bf Notação assintótica}
 \tabularnewline
 \tabularnewline
@@ -270,19 +271,19 @@ $\Theta(\cdot)$ \dotfill &
 \index{$\Theta(\cdot)$}%
 Quando é expresso que $f(n)\in\Theta(g(n))$, dize-se que existe uma constante
 $k_1$, tal que a função $f(n)$, para todo valor de $n>n_0$, é sempre limitada
-inferiormente por $k_1g(n)$, e também existe uma outra constante $k_2$, tal que
-a função $f(n)$, para todo valor de $n>n_0$, é sempre limitada superiormente
-por $k_2g(n)$.
+inferiormente por $k_1g(n)$, e também existe uma outra constante $k_2$, tal
+que a função $f(n)$, para todo valor de $n>n_0$, é sempre limitada
+superiormente por $k_2g(n)$.
 De forma equivalente, define-se que $f(n)\in\Theta(g(n))$ se e somente se
 \begin{equation*}
 \lim_{n\rightarrow\infty}\frac{f(n)}{g(n)}=c\text{,}
 \end{equation*}
-para $g(n)$ diferente de zero ou, pelo menos, sempre maior de que zero a partir
-de algum ponto e para $0<c<\infty$.
+para $g(n)$ diferente de zero ou, pelo menos, sempre maior de que zero a
+partir de algum ponto e para $0<c<\infty$.
 \tabularnewline
 \tabularnewline
 
-% --------------------------------------------------------------------------- %
+% ------------------------------------------------------------------------- %
 \multicolumn{2}{l}{\bf Igualdades matemáticas}
 \index{igualdades}
 \tabularnewline
@@ -328,12 +329,12 @@ onde $\mathbf{x}(t)$ é um vetor coluna.
 
 $\equiv$ \dotfill &
 \index{$\equiv$}%
-Equivalência, por exemplo, $x \equiv y$ significa que $x$ é definido como sendo
-logicamente igual à $y$.
+Equivalência, por exemplo, $x \equiv y$ significa que $x$ é definido como
+sendo logicamente igual à $y$.
 \tabularnewline
 \tabularnewline
 
-% --------------------------------------------------------------------------- %
+% ------------------------------------------------------------------------- %
 \multicolumn{2}{l}{\bf Notação estatística}
 \tabularnewline
 \tabularnewline
@@ -341,7 +342,8 @@ logicamente igual à $y$.
 $\sim$ \dotfill &
 Indicador de distribuição de probabilidade, por exemplo $\mathcal{X} \sim
 N(\mu,\sigma)$ indica que a variável aleatória $\mathcal{X}$ segue uma
-distribuição de probabilidade normal com média $\mu$ e desvio padrão $\sigma$.
+distribuição de probabilidade normal com média $\mu$ e desvio padrão
+$\sigma$.
 \index{media@média}%
 \index{desvio padrao@desvio padrão}%
 \tabularnewline
@@ -356,15 +358,16 @@ Resultado ou realização $\zeta$ da variável aleatória $\mathcal{X}$.
 $\operatorname{P}(\mathcal{X}_\zeta)$ \dotfill &
 \index{probabilidade}%
 \index{$\operatorname{P}(\mathcal{X}_\zeta)$}%
-Probabilidade da variável aleatória $\mathcal{X}$ assumir a realização $\zeta$.
+Probabilidade da variável aleatória $\mathcal{X}$ assumir a realização
+$\zeta$.
 \tabularnewline
 \tabularnewline
 
 $\operatorname{P}(\mathcal{X}_\zeta\mid p)$ \dotfill &
 \index{probabilidade!condicional}%
 \index{$\operatorname{P}(\mathcal{X}_\zeta\mid p)$}%
-Probabilidade da variável aleatória $\mathcal{X}$ assumir a realização $\zeta$
-dado que o predicado $p$ é verdadeiro.
+Probabilidade da variável aleatória $\mathcal{X}$ assumir a realização
+$\zeta$ dado que o predicado $p$ é verdadeiro.
 \tabularnewline
 \tabularnewline
 
@@ -395,7 +398,7 @@ onde $\mho$ é o conjunto de possíveis realizações da variável aleatória.
 \tabularnewline
 \tabularnewline
 
-% --------------------------------------------------------------------------- %
+% ------------------------------------------------------------------------- %
 \multicolumn{2}{l}{\bf Operadores matemáticos}
 \tabularnewline
 \tabularnewline
@@ -461,7 +464,7 @@ elementos de $X$ e de $Y$.
 \tabularnewline
 \tabularnewline
 
-% --------------------------------------------------------------------------- %
+% ------------------------------------------------------------------------- %
 \multicolumn{2}{l}{\bf Operadores lógicos}
 \tabularnewline
 \tabularnewline
@@ -501,6 +504,6 @@ $((a \Rightarrow b) \wedge (b \Rightarrow a))$.
 \end{longtable}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% FIM DO GLOSSÁRIO                                                          %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO GLOSSÁRIO                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

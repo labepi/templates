@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% INÍCIO CAPÍTULO                                                           %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INÍCIO CAPÍTULO                                                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Levantamento bibliográfico}
 \label{cap:2:fundamentacao}
@@ -14,13 +14,13 @@ O entendimento dos fundamentos...
 
 Este Capítulo está organizado da seguinte forma...
 
-% =========================================================================== %
+% ========================================================================= %
 \section{Introdução}
 \label{sec:2:introducao}
 
 \citep{brassard1996fundamentals}
 
-% =========================================================================== %
+% ========================================================================= %
 \section{Fundamentação}
 \label{sec:2:fundamentacao}
 
@@ -33,11 +33,11 @@ $G=\langle N, E, \omega \rangle$, onde $N$ representa o conjunto de vértices
 (ou nós) do grafo e $E$ o conjunto de arestas ao qual se atribui as seguintes
 propriedades:
 \begin{inparaenum}[(i)]
-\item cada aresta é composta por um par ordenado de nós $(v_1,v_2)$, que indica
-    que existe uma ligação saindo do nó $v_1$ em direção ao nó $v_2$ e
-\item para cada aresta $e \in E$ existe um peso que é associado por uma função
-    $\omega(\cdot)$, que realiza o mapeamento dos pesos de cada aresta para um
-    número real, ou seja, $\omega \colon E\mapsto\mathbb{R}$.
+\item cada aresta é composta por um par ordenado de nós $(v_1,v_2)$, que
+    indica que existe uma ligação saindo do nó $v_1$ em direção ao nó $v_2$ e
+\item para cada aresta $e \in E$ existe um peso que é associado por uma
+    função $\omega(\cdot)$, que realiza o mapeamento dos pesos de cada aresta
+    para um número real, ou seja, $\omega \colon E\mapsto\mathbb{R}$.
 \end{inparaenum}
 \end{definicao}
 
@@ -67,21 +67,21 @@ de forma iterativa com base na representação por lista de adjacência.
 Considera-se que os vetores $g_\text{in}$ e $g_\text{out}$ são indexados a
 partir de 1.
 A complexidade do algoritmo é da ordem de 
-$\Theta(n\operatorname{E}\{\mathcal{G}^\text{out}\})$ em tempo e $\Theta(n)$ em
-memória.
+$\Theta(n\operatorname{E}\{\mathcal{G}^\text{out}\})$ em tempo e $\Theta(n)$
+em memória.
 \end{algoritmo}
 
-% =========================================================================== %
+% ========================================================================= %
 \section{Objetivos específicos}
 \label{sec:2:objetivos}
 
 
-% =========================================================================== %
+% ========================================================================= %
 \section{Metodologia}
 \label{sec:2:metodologia}
 
-O procedimento metodológico utilizado no desenvolvimento deste trabalho possui
-uma abordagem dividida em 5 estágios.
+O procedimento metodológico utilizado no desenvolvimento deste trabalho
+possui uma abordagem dividida em 5 estágios.
 Esses estágios são ordenados em uma sequência em que é permitida uma evolução
 com ciclos, cuja relação é descrita na Figura~\ref{fig:metodologia}.
 
@@ -117,8 +117,9 @@ possibilidades de evolução de acordo com a ilustração apresentada.
     soluções para problemas similares ou logicamente equivalentes.
     Em relação à evolução temos que:
     \begin{compactenum}[(i)]
-    \item o estudo inicial pode levar a um ciclo de busca por soluções que, por
-        sua vez, pode remeter ao estudo bibliográfico de outros trabalhos e
+    \item o estudo inicial pode levar a um ciclo de busca por soluções que,
+        por sua vez, pode remeter ao estudo bibliográfico de outros trabalhos
+        e
     \item dado que a bibliografia levantada é tida como definitiva, o próximo
         estágio a ser considerado é o da criação de um modelo para o problema
         que possa ser utilizado na elaboração de soluções.
@@ -133,8 +134,8 @@ possibilidades de evolução de acordo com a ilustração apresentada.
     \item estender a modelagem ao se verificar uma deficiência na abordagem
         encontrada na literatura e
     \item possivelmente, quando a necessidade de extensão ocorre, deve-se
-        recorrer novamente ao estudo bibliográfico, pois essas extensões devem
-        ser cuidadosamente projetadas e validadas.
+        recorrer novamente ao estudo bibliográfico, pois essas extensões
+        devem ser cuidadosamente projetadas e validadas.
     \end{compactenum}
 \item {\bf Elaboração de soluções}: a partir do modelo criado no estágio
     anterior, é possível elaborar soluções algorítmicas e aplicar métodos de
@@ -164,12 +165,12 @@ possibilidades de evolução de acordo com a ilustração apresentada.
         elaboração para construção de uma outra solução.
     \end{compactenum}
 \item {\bf Análise experimental}: se o estágio de análise de complexidade
-    fomenta a utilização da solução proposta, deve-se realizar experimentos com
-    dados reais para validar a solução, ou aplicá-las à instâncias do modelo a
-    fim de extrair conjecturas acerca das propriedades do modelo que indiquem a
-    validade da solução.
+    fomenta a utilização da solução proposta, deve-se realizar experimentos
+    com dados reais para validar a solução, ou aplicá-las à instâncias do
+    modelo a fim de extrair conjecturas acerca das propriedades do modelo que
+    indiquem a validade da solução.
 \end{compactenum}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% FIM CAPÍTULO                                                              %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM CAPÍTULO                                                            %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
