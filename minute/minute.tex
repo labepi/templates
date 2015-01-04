@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author: Joao Paulo de Souza Medeiros                                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[top=3cm,bottom=6cm,left=2cm,right=2cm]{geometry} % Assinaturas
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{lineno}
+\usepackage{color}
+\usepackage{indentfirst}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\chead{Primeira Reunião do Grupo do Projeto NP, 1 de abril de 1985}
+\cfoot{Página \thepage\ de \pageref{LastPage}}
+
+\renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0.4pt
+
+\begin{document}
+
+% ========================================================================= %
+\noindent{%
+\parbox{0.25\textwidth}%
+{\includegraphics[width=0.25\textwidth]{image/ufrn.eps}}%
+\parbox{0.65\textwidth}%
+{
+  \begin{center}%
+  \small\textbf{Universidade Federal do Rio Grande do Norte\\
+    Centro de Ensino Superior do Seridó\\
+    Laboratório de Elementos do Processamento da Informação\\
+    Reunião do Grupo do Projeto NP}
+  \end{center}
+}%
+\parbox{0.1\textwidth}%
+{\includegraphics[width=0.1\textwidth]{image/labepi-square.eps}}
+
+\linenumbers
+\def\linenumberfont{\normalfont\small\sffamily}
+
+\vspace{1em}
+
+% Se houverem reuniões periódicas, deve-se usar o termo `Reunião Ordinária'
+% para aquelas agendadas e `Reunião Extraordinária' para aquelas marcadas em
+% datas não programadas.
+% Se as reuniões são feitas sob demanda, usa-se apenas o termo `Reunião'.
+% ------------------------------------------------------------------------- %
+\noindent%
+{\bf Primeira Reunião} ({\bf Data}: 1 de abril de 1985)\\
+{\bf Presentes}:
+\begin{inparaenum}[(i)]\small
+\item Professor Nome Completo do Docente A,
+\item Professor Nome Completo do Docente B,
+\item Servidor Nome Completo do Funcionário A,
+\item Servidor Nome Completo do Funcionário B,
+\item Discente Nome Completo do Aluno A,
+\item Discente Nome Completo do Aluno B.
+\end{inparaenum}
+
+\vspace{1em}
+
+% ------------------------------------------------------------------------- %
+{\bf Informações}:
+Descreve-se informações que contextalizam o exposto na próxima seção,
+denominada `Decisões'.
+Como no exemplo que se segue.
+Para a primeira reunião as seguintes tarefas foram realizadas:
+\begin{inparaenum}
+\item primeira tarefa,
+\item segunda tarefa e
+\item terceira tarefa;
+\end{inparaenum}
+que foram apresentadas pelos membros Professor Docente A, Servidor
+Funcionário A e pelo Discente Aluno A, respectivamente. 
+
+\lipsum[1]
+\lipsum[3]
+
+\vspace{1em}
+
+% ------------------------------------------------------------------------- %
+{\bf Decisões}:
+Às dez horas do dia 1 de abril de 1985 teve início a primeira reunião do
+grupo Nome do Grupo (NG), responsável pelo projeto Nome do Projeto (NP) do
+Laboratório de Elementos do Processamento da Informação (LabEPI) do Centro
+Superior de Ensino Superior do Seridó (CERES) da Universidade Federal do Rio
+Grande do Norte (UFRN).
+
+Nesta primeira reunião ficou decidido entre os membros que a meta de cada
+uma das próximas reuniões seria a definição detalhada das seguintas etapas do
+projeto:
+\begin{compactenum}
+\item primeira etapa,
+\item segunda etapa,
+\item terceira etapa e 
+\item última etapa.
+\end{compactenum}
+Além disso foram discutidos quais equipamentos deveriam ser adquiridos para
+que o desenvolvimento do projeto fosse possível.
+
+\lipsum[2]
+\lipsum[4]
+
+Às onze horas e trinta minutos, nada mais havendo a tratar, os membros do NG
+deram por por encerrada a reunião, de cujos trabalhos, eu, Discente Aluno B,
+lavrei a presente ata que, após lida e aprovada, segue devidamente assinada
+por todos os membros presentes.
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
