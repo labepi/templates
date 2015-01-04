@@ -1,0 +1,33 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/color/beamercolorthemelabepi.sty,v 1.0 2011/02/21 20:48:24 ignotus Exp $
+
+
+\mode<presentation>
+
+\definecolor{lsdarkblue}{RGB}{40,22,111}
+\definecolor{lslightblue}{RGB}{0,134,206}
+
+\setbeamercolor{title}{fg=white,bg=lsdarkblue}
+\setbeamercolor{frametitle}{fg=white,bg=lsdarkblue}
+
+\setbeamercolor{itemize item}{fg=lsdarkblue}
+\setbeamercolor{itemize subitem}{fg=lslightblue}
+
+\setbeamercolor{block title}{fg=lsdarkblue,bg=white}
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg!75!black}
+\setbeamercolor{block title example}{fg=white,bg=lslightblue}
+
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!50!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!50!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!50!bg}
+
+\mode
+<all>
