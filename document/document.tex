@@ -55,13 +55,13 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{booktabs}
+\usepackage{paralist}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{indentfirst}
 \usepackage{lineno}
 \usepackage{longtable}
-\usepackage{paralist}
 \usepackage{thmtools}
 \usepackage{lastpage}
 \usepackage{imakeidx}
@@ -75,18 +75,78 @@
 %% PARÂMETROS                                                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\include{content/commands}       % Comandos próprios
+% Infenização
+\hyphenation{net-works lay-out}
+
+% Configuração do ambiente Verbatim do fancyvrb
+\fvset{fontsize=\small,xleftmargin=1mm,xrightmargin=1mm}
+
+% Configuração de diagramas de Gantt
+\ganttset{%
+  canvas/.append style={fill=none, dotted},
+  %vgrid={draw={none}, dotted},
+  vgrid,
+  hgrid,
+  today label=Prazo,
+  group height=.3,
+  group left shift=0,
+  group right shift=0,
+  group peaks height=1,
+  group/.style={draw=black,fill=black},    
+  bar height=.3,
+  bar/.style={fill=black},
+  progress label text={#1\pct},
+  title height=1}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% Teoremas
+\declaretheoremstyle[
+  spaceabove=6pt,
+  spacebelow=6pt,
+  headfont=\normalfont\bfseries,
+  notefont=\mdseries,
+  notebraces={(}{)},
+  bodyfont=\normalfont,
+  postheadspace=1em,
+  qed=$\square$,
+  numberwithin=chapter
+]{thmsty}
+
+\declaretheorem[style=thmsty,name=Algoritmo]{algoritmo}
+
+\declaretheorem[style=thmsty,name=Definição]{definicao}
+\declaretheorem[style=thmsty,name=Premissa]{premissa}
+
+\declaretheorem[style=thmsty,name=Afirmação]{afirmacao}
+\declaretheorem[style=thmsty,name=Observação]{observacao}
+\declaretheorem[style=thmsty,name=Corolário]{corolario}
+\declaretheorem[style=thmsty,name=Lema]{lema}
+\declaretheorem[style=thmsty,name=Teorema]{teorema}
+
+\declaretheorem[style=thmsty,name=Nota]{nota}
+
+% Índice
+\makeindex[intoc,options={-s labepi.ist}]
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue}
+
+\index{recorrencia@recorrência|see{recursividade}}
+\index{recursividade|see{recorrência}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% INÍCIO DO DOCUMENTO                                                     %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{document}
+
+\include{content/commands}       % Comandos próprios
+
 \definirtitulo{%
 Modelo de Referência para Escrita de Monografias e Relatórios do LabEPI}
 
 \definirtitulocurto{Modelo de Monografias e Relatórios do LabEPI}
-
-\begin{document}
 
 % Numeração de linhas para auxiliar nas correções (comentar na versão final)
 \linenumbers

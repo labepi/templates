@@ -15,40 +15,15 @@
   \clearpage
 \fi}
 
-% Infenização
-\hyphenation{net-works lay-out}
 
 % Comandos próprios
 \newcommand*\pct{\scalebox{.9}{\%}}
-
-% Configuração do ambiente Verbatim do fancyvrb
-\fvset{fontsize=\small,xleftmargin=1mm,xrightmargin=1mm}
-
-% Configuração de diagramas de Gantt
-\ganttset{%
-  canvas/.append style={fill=none, dotted},
-  %vgrid={draw={none}, dotted},
-  vgrid,
-  hgrid,
-  today label=Prazo,
-  group height=.3,
-  group left shift=0,
-  group right shift=0,
-  group peaks height=1,
-  group/.style={draw=black,fill=black},    
-  bar height=.3,
-  bar/.style={fill=black},
-  progress label text={#1\pct},
-  title height=1}
 
 \newcommand{\citacao}[2]{%
 \begin{flushright}
 \footnotesize
 \parbox{0.95\textwidth}{\flushright{\it``#1''\\ \scriptsize #2}}
 \end{flushright}}
-
-\DeclareMathOperator*{\argmin}{arg\,min}
-\DeclareMathOperator*{\argmax}{arg\,max}
 
 \newcommand{\definirtitulo}[1]{\newcommand{\titulo}{#1}}
 \newcommand{\definirtitulocurto}[1]{\newcommand{\titulocurto}{#1}}
@@ -101,32 +76,6 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}}
 
-% Teoremas
-\declaretheoremstyle[
-  spaceabove=6pt,
-  spacebelow=6pt,
-  headfont=\normalfont\bfseries,
-  notefont=\mdseries,
-  notebraces={(}{)},
-  bodyfont=\normalfont,
-  postheadspace=1em,
-  qed=$\square$,
-  numberwithin=chapter
-]{thmsty}
-
-\declaretheorem[style=thmsty,name=Algoritmo]{algoritmo}
-
-\declaretheorem[style=thmsty,name=Definição]{definicao}
-\declaretheorem[style=thmsty,name=Premissa]{premissa}
-
-\declaretheorem[style=thmsty,name=Afirmação]{afirmacao}
-\declaretheorem[style=thmsty,name=Observação]{observacao}
-\declaretheorem[style=thmsty,name=Corolário]{corolario}
-\declaretheorem[style=thmsty,name=Lema]{lema}
-\declaretheorem[style=thmsty,name=Teorema]{teorema}
-
-\declaretheorem[style=thmsty,name=Nota]{nota}
-
 \renewcommand{\qedsymbol}{{\bf C.Q.D.}}
 
 % Bibliografia
@@ -144,14 +93,6 @@
 \else
   \backrefcitedmultiple{#2}
 \fi}
-
-% Índice
-\makeindex[intoc,options={-s labepi.ist}]
-
-\hypersetup{colorlinks,linkcolor=blue,citecolor=blue}
-
-\index{recorrencia@recorrência|see{recursividade}}
-\index{recursividade|see{recorrência}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% FIM DO ARQUIVO DE COMANDOS                                              %%
